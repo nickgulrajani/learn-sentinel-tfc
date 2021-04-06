@@ -4,9 +4,9 @@ provider "aws" {
 
 terraform {
   backend "remote" {
-    organization = "wwtatctrialaccount"
+    organization = "wwtmulticloud"
     workspaces {
-      name = "cloudservices"
+      name = "sentinel-policy-tests"
     }
    }
  }
@@ -21,8 +21,8 @@ resource "aws_s3_bucket" "demo" {
   bucket = "${var.prefix}-${random_pet.petname.id}"
   acl    = "public-read-write"
   tags = {
-    NotName        = "HashiCorp"
-    NotEnvironment = "Learn"
+    Name        = "HashiCorp"
+    Environment = "Learn"
   }
   policy = <<EOF
 {
