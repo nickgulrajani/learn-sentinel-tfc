@@ -17,7 +17,7 @@ resource "random_pet" "petname" {
   separator = "-"
 }
 
-resource "aws_s3_bucket" "demo" {
+resource "aws_s3_bucket" "nicksentinelbucket" {
   bucket = "${var.prefix}-${random_pet.petname.id}"
   acl    = "public-read-write"
   tags = {
