@@ -1,6 +1,6 @@
 variable "region" {
   description = "This is the cloud hosting region where Terraform deploys your webapp"
-  default = "us-east-1"
+  default = "us-east-2"
   
 }
 

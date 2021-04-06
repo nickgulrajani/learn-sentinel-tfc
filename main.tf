@@ -54,7 +54,7 @@ EOF
 resource "aws_s3_bucket_object" "demo" {
   acl          = "public-read"
   key          = "index.html"
-  bucket       = aws_s3_bucket.demo.id
+  bucket       = aws_s3_bucket.nicksentinelbucket.id
   content      = file("${path.module}/assets/index.html")
   content_type = "text/html"
 
